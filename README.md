@@ -26,5 +26,5 @@ The robots used are defined in the following folder:
   -  Inertial unit
   -  Camera
   -  GPS
-  -  Distacnce sensors
+  -  Distance sensors
   -  Wheels and motors
