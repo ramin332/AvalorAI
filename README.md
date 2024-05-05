@@ -18,9 +18,8 @@ The controller folder has two controllers
   - save.c > Used to save the target list of every robot after they run out of battery or the simulation is paused.
 - Supervisor > This is necessary to randomize the robots and set the battery level for every new run.
 
-
-Other interesting files can be found in:
-- Protos> Pioneer3at.proto > The robot is defined here. Add-ons are:
+The robots used are defined in the following folder:
+- Protos > Pioneer3at.proto > Add-ons are
   -  Pen
   -  Receiver
   -  Emitter
