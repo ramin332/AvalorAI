@@ -1,0 +1,71 @@
+#VRML_SIM R2023a utf8
+# Describe the functionality of your PROTO here.
+# template language: javascript
+
+
+PROTO Floor [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 0 1 0
+  field SFVec3f scale 1 1 1
+  field MFNode children [ ]
+  field SFString name "solid"
+  field SFString model ""
+  field SFString description ""
+  field SFString contactMaterial "default"
+  field MFNode immersionProperties [ ]
+  field SFNode boundingObject NULL
+  field SFNode physics NULL
+  field SFBool locked FALSE
+  field SFFloat radarCrossSection 0
+  field MFColor recognitionColors [ ]
+  field SFFloat translationStep 0.01
+  field SFFloat rotationStep 0.261799387
+  field SFVec3f linearVelocity 0 0 0
+  field SFVec3f angularVelocity 0 0 0
+]
+{
+ 
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Floor {
+        size 1200 1200
+        tileSize IS floorTileSize
+        appearance IS floorAppearance
+        contactMaterial IS contactMaterial
+      }
+      SolidBox {
+        translation 600.25 0 5
+        name "wall"
+        size 0.5 1200 10
+        appearance IS wallAppearance
+        contactMaterial IS contactMaterial
+      }
+      SolidBox {
+        translation -600.25 0 5
+        name "wall#2"
+        size 0.5 1200 10
+        appearance IS wallAppearance
+        contactMaterial IS contactMaterial
+      }
+      SolidBox {
+        translation 0 600.25 5
+        name "wall#3"
+        size 1201 0.5 10
+        appearance IS wallAppearance
+        contactMaterial IS contactMaterial
+      }
+      SolidBox {
+        translation 0 -600.25 5
+        name "wall#4"
+        size 1201 0.5 10
+        appearance IS wallAppearance
+        contactMaterial IS contactMaterial
+      }
+    ]
+    name IS name
+    model "rectangle arena"
+  }
+
+}

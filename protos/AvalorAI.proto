@@ -1,0 +1,13 @@
+#VRML_SIM R2023a utf8
+# Describe the functionality of your PROTO here.
+# template language: javascript
+
+
+PROTO AvalorAI [
+  field SFVec2f size 1 1
+]
+{
+  Plane {
+    size IS size
+  }
+}
